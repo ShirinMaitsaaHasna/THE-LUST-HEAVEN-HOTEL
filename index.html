@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lust Heaven Hotel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,
+    wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;
+    1,8..60,200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <h2 class="logo" style="font-family: playfair-display, serif;">THE LUST HEAVEN</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#rooms">Rooms</a></li>
+                <li><a href="#food">Food</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+     <header id="home" class="hero">
+        <div class="hero-text">
+            <h1 style="font-size: 80px; color: white;">Your Escape</h1>
+            <h1 style="font-size: 80px; color: white;">Begins Here</h1>
+            <p style="color:white;">where comfort meets luxury</p>
+            <button class="btn">Book Now</button>
+        </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+        <div class="about-left">
+            <img src="picture/about1.jpeg" alt="">
+            <img src="picture/about2.jpeg" alt="">
+        </div>
+        <div class="about-right">
+            <h3>ABOUT US</h3>
+            <h2>Discover Our Underground</h2>
+            <justify><p>The lust heaven hotel is created as a place where comfort, serenity, and luxury blend into one unforgettable experience. we believe every guest deserves the finest stay, from warm and inviting spaces to calming interiors and thoughtful details that make every moment feel special.
+
+located in a strategic and accessible area, our hotel offers a peaceful atmosphere while remaining close to essential destinations. each room is designed with a balance of modern aesthetics and premium comfort, giving every guest the perfect space to rest, work, or enjoy their private time.
+
+we are committed to delivering friendly service, complete facilities, and an exceptional experience that makes guests want to return. at the lust heaven hotel, every visit becomes more than just a stay — it becomes a story worth remembering.
+
+welcome to a place where comfort meets elegance.</p></justify>
+            <a href="#" class="btn">Book Now</a>
+        </div>
+    </section>
+
+    <!-- ROOMS -->
+    <section id="rooms" class="rooms">
+        <h2 class="section-title">Our Rooms</h2>
+
+        <div class="room-container">
+
+            <!-- ROOM 1 -->
+            <div class="room-card">
+                <img src="picture/room1.jpeg" alt="">
+                <h3>Individual Room</h3>
+                <p>Perfect for solo travelers seeking peace & comfort.</p>
+                <span class="price">$577 / Night</span>
+                <button class="btn">Book Now</button>
+            </div>
+
+            <!-- ROOM 2 -->
+            <div class="room-card">
+                <img src="picture/room2.jpeg" alt="">
+                <h3>Family Room</h3>
+                <p>Spacious room ideal for family vacation.</p>
+                <span class="price">$677 / Night</span>
+                <button class="btn">Book Now</button>
+            </div>
+
+            <!-- ROOM 3 -->
+            <div class="room-card">
+                <img src="picture/room3.jpeg" alt="">
+                <h3>Penthouse</h3>
+                <p>Experience unmatched luxury with the best view.</p>
+                <span class="price">$977 / Night</span>
+                <button class="btn">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOD / RESTAURANT SECTION -->
+<section id="foods" class="foods">
+    <h2 class="section-title">Our Special Dishes</h2>
+
+    <div class="food-container">
+
+        <!-- FOOD CARD 1 -->
+        <div class="food-card" onclick="openFood(1)">
+            <img src="picture/food1.jpeg" alt="">
+            <h3>Steak Premium</h3>
+        </div>
+
+        <!-- FOOD CARD 2 -->
+        <div class="food-card" onclick="openFood(2)">
+            <img src="picture/food2.jpeg" alt="">
+            <h3>Shrimp Pasta</h3>
+        </div>
+
+        <!-- FOOD CARD 3 -->
+        <div class="food-card" onclick="openFood(3)">
+            <img src="picture/food3.jpeg" alt="">
+            <h3>Chicken Teriyaki</h3>
+        </div>
+
+        <!-- FOOD CARD 4 -->
+        <div class="food-card" onclick="openFood(4)">
+            <img src="picture/food4.jpeg" alt="">
+            <h3>Salmon Bowl</h3>
+        </div>
+
+        <!-- FOOD CARD 5 -->
+        <div class="food-card" onclick="openFood(5)">
+            <img src="picture/food5.jpeg" alt="">
+            <h3>Chocolate Lava</h3>
+        </div>
+
+        <center><p>our hotel offers a selection of freshly prepared dishes made with quality ingredients to ensure every guest enjoys a delightful dining experience. from comforting breakfast options to flavorful meals throughout the day, each plate is crafted to bring warmth and satisfaction.
+
+guests can enjoy a variety of local and international cuisines in our restaurant, or choose to dine in the comfort of their room through our room service. every dish is served with attention to taste, freshness, and presentation, creating a memorable culinary moment during your stay.</p></center>
+    </div>
+</section>
+
+<!-- FOOD POPUP MODAL -->
+<div id="foodModal" class="food-modal">
+    <div class="food-modal-content">
+        <span class="close" onclick="closeFood()">&times;</span>
+        <img id="foodImg" src="">
+        <h2 id="foodName"></h2>
+        <p id="foodDesc"></p>
+    </div>
+</div>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="reviews">
+        <h2 class="section-title">What Our Guests Say</h2>
+        <div class="review-container">
+
+            <div class="review-card">
+                <img src="picture/user.jpeg" alt="">
+                <h3>Hong Jay</h3>
+                <p>Setiap sudut hotel ini mencerminkan kemewahan. Staf sangat profesional, kamar nyaman, dan pemandangan begitu memanjakan mata. Lebih dari sekadar liburan.</p>
+            </div>
+
+            <div class="review-card">
+                <img src="picture/user2.jpeg" alt="">
+                <h3>Zhao James</h3>
+                <p>Keren banget, aku sama mama papa dan kakak liburan nginep di sini. Makan sepuasnya gpp kata mbak staffnya.</p>
+            </div>
+
+            <div class="review-card">
+                <img src="picture/user3.jpeg" alt="">
+                <h3>Jayden Rexander</h3>
+                <p>A serene retreat for those who appreciate high standards and refined comfort.</p>
+            </div>
+
+            <div class="review-card">
+                <img src="picture/user4.jpeg" alt="">
+                <h3>San Januar</h3>
+                <p>Pelayanan yang bagus. Saya akan merekomendasikan ini ke teman teman kantor saya.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+    <!-- SOCIAL MEDIA -->
+    <div class="footer-section">
+        <h3>follow us</h3>
+        <div class="footer-icons">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="footer-section">
+        <h3>services</h3>
+        <p>room service</p>
+        <p>daily housekeeping</p>
+        <p>restaurant & bar</p>
+        <p>spa & wellness</p>
+        <p>safety & security 24/7</p>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: thelustheaven@gmail.com</p>
+        <p>Phone: +62 812-3456-7890</p>
+        <p>Open: Monday – Saturday</p>
+        <p>Location: Jl. Mawar No. 21, Jakarta</p>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        © 2025 The Lust Heaven — All Rights Reserved
+    </div>
+</footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

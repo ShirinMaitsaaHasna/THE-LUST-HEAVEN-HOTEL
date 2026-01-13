@@ -1,0 +1,327 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, "Playfair Display", serif;
+}
+
+body {
+    background: #f4f4f4;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar ul li {
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar ul li a:active {
+    color: white;      /* warna teks saat ditekan */
+    background: #333;  /* warna background saat ditekan */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url("picture/hero.jpeg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.hero-content {
+    color: white;
+    max-width: 200px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 20px;
+    background: #9f754f;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 6px;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    padding: 80px;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+}
+
+.about-left img {
+    width: 200px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* ROOMS */
+.rooms {
+    padding: 70px;
+    background: #fafafa;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.room-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.room-card {
+    background: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* ROOM HOVER EFFECT */
+.room-card {
+    transition: 0.3s ease;
+}
+
+.room-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.room-card img {
+    transition: 0.3s ease;
+}
+
+.room-card:hover img {
+    transform: scale(1.05);
+}
+
+
+.room-card img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* FOOD SECTION */
+.foods {
+    padding: 70px;
+    background: #fff;
+}
+
+.food-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.food-card {
+    width: 160px;
+    padding: 20px;
+    background: #fafafa;
+    border-radius: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.food-card:hover {
+    scale: 1.05;
+}
+
+.food-card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* FOOD POPUP */
+.food-modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.food-modal-content {
+    width: 350px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.food-modal-content img {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+.food-modal-content .close {
+    float: right;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.food-card.active {
+    background: #ffb703;     /* warna kuning / bisa kamu ganti */
+    color: #fff;
+    transform: scale(1.05);
+}
+
+.food-card.active h3 {
+    color: #fff;
+}
+
+
+/* REVIEWS */
+.reviews {
+    padding: 70px;
+    background: #fff;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.review-card {
+    background: #fafafa;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* REVIEW HOVER EFFECT */
+.review-card {
+    transition: 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.review-card img {
+    transition: 0.3s ease;
+}
+
+.review-card:hover img {
+    transform: scale(1.08);
+}
+
+
+.review-card img {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* FOOTER */
+.footer {
+    background: #9f754f;
+    color: #eee;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.footer-section {
+    width: 250px;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.footer p, .footer a {
+    font-size: 14px;
+    color: #ccc;
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+.footer a:hover {
+    color: #fff;
+}
+
+.footer-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-icons i {
+    font-size: 22px;
+    color: #ccc;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.footer-icons i:hover {
+    color: #fff;
+}
+
+.footer-bottom {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #9f754f;
+    font-size: 13px;
+    color: #aaa;
+}
